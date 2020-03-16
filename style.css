@@ -1,0 +1,281 @@
+@keyframes popup{
+	0%{
+		transform: translateY(0px);
+	}
+	25%{
+		transform: translateY(-600px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	75%{
+		transform: translateY(-50px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+
+}
+.container{ margin-top: 400px;}
+.ball{
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	border: 1 solid #fff;
+	border-radius: 2em;
+	background-color: yellow;
+	animation: popup 2s infinite;
+}
+.ball:nth-child(1){
+	background-color: #FC94E0;
+}
+.ball:nth-child(2){
+	background-color: #AD98FD;
+	animation-delay: .20s;
+}
+.ball:nth-child(3){
+	background-color: #B2FD9C;
+	animation-delay: .30s;
+}
+.ball:nth-child(4){
+	background-color: #E3F952;
+	animation-delay: .40s;
+}
+.ball:nth-child(5){
+	background-color: #D9A35A;
+	animation-delay: .50s;
+}
+.ball:nth-child(6){
+	background-color: #FA6A67;
+	animation-delay: .60s;
+}
+/* Clock*/
+@keyframes rotate {
+	from{
+    transform: rotate(0deg);
+    }
+    to{
+    	transform: rotate(360deg);
+    }
+}
+
+.clock{
+	border: 10px solid #0499D8;
+	width: 250px;
+	height: 250px;
+	border-radius: 500px;
+	position: relative;
+	background-color: white;
+}
+.tick{
+	position: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	margin-top: 15px;
+	margin-left: 110px;
+	border-radius: 50px;
+	width: 5px;
+	height: 125px;
+    transform-origin: 80% 80%;
+	border: 5px solid #0499D8;
+	animation: rotate 5s infinite forwards;
+}
+.clock:hover .tick{
+	animation-play-state: paused;
+}
+/* Heart*/
+@keyframes boom{
+	0%{
+		transform: rotate(45deg) scale(1);
+	}
+	25%{
+		transform: rotate(45deg) scale(2);
+	}
+	50%{
+		transform: rotate(45deg) scale(1);
+	}
+	75%{
+		transform: rotate(45deg) scale(1.5);
+
+	}
+	100%{
+		transform: rotate(45deg) scale(1);
+	}
+}
+.heart{
+	margin: 300px;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	transform: rotate(45deg);
+	animation: boom 1s infinite;
+
+}
+.heart:before{
+	content: '';
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	background-color: red;
+	border-top-left-radius: 100px;
+	border-top-right-radius:100px;
+	top: -50px; 
+}
+.heart:after{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	background-color: red;
+	border-bottom-left-radius: 100px;
+	border-top-left-radius:100px; 
+	left: -50px;
+}
+/* Navbar*/
+.main{
+    position: absolute;
+    transform: rotate(-35deg) skew(20deg,5deg);
+    display: block;
+    margin-left: 500px;
+}
+.item{
+  background: #000;
+  color: #575757;
+  text-align: center;
+  height: 50px;
+  width: 60px;
+  vertical-align: middle;
+  line-height: 2.5em;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  box-shadow: -20px 25px 0 #e1e1e1;
+  transition: all .25s;
+}
+.item:hover{
+	transform: translate(2em,-1em);
+	background-color: red;
+}
+.item:hover::after{
+	content: '';
+    position: absolute;
+    background-color: #b65234;
+    height: 50px;
+    width: 20px;
+    left: -19px;
+    bottom: -10px;
+    transform: skewY(-45deg);
+}
+.item:hover::before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	background-color:#b65234 ;
+	bottom: -40px;
+    left: 10px;
+	transform: rotate(90deg) skew(0,45deg);
+}
+/* SlideShow*/
+#slider {
+	height: 2000px;
+	width: 100%;
+	height: 500px;
+}
+
+.slideshow{
+	overflow: hidden;
+	width: 100%;
+	height: 500px;
+}
+.slide{
+	position: absolute;
+	float: left;
+	height: 300px;
+	width: 100%;
+}
+.slide1{
+	position: absolute;
+	animation:slides infinite;
+	animation-delay: 2s;
+}
+.slide2{
+	position: absolute;
+	animation:slides infinite;
+	animation-delay: 4s;
+}
+.slide3{
+	position: absolute;
+	animation: slides infinite;
+	animation-delay: 10s;
+}
+.slide4{
+	position: absolute;
+	animation: slides infinite;
+	animation-delay: 20s;
+}
+@keyframes slides{
+	from{
+		margin: 0 0;
+	}
+	to{margin: 200px 200px;
+	}
+}
+/* Traffic*/
+#traffic{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: black;
+}
+.box{
+	margin: 0px 100px;	
+	background-color: black;
+	height: auto;
+	width: 100px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 20px 30px black;
+}
+.solid{
+	width: 25px;
+	height: 300px;
+	background-color: black;
+	margin-left: 147px;
+}
+@keyframes colorred{
+	from{
+		background-color: black;
+	}
+	to{
+		background-color: red;
+	}
+}
+@keyframes coloryellow{
+	from{
+		background-color: black;
+	}
+	to{
+		background-color: yellow;
+	}
+}
+@keyframes colorgreen{
+	from{
+		background-color: black;
+	}
+	to{
+		background-color: green;
+	}
+}
+.red{
+	animation: colorred 2s; 
+}
+.yellow{
+	animation: coloryellow 2s;
+	animation-delay: 3s;
+}
+.green{
+	animation: colorgreen 2s;
+	animation-delay: 6s;
+}
